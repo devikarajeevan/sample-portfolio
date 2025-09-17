@@ -1,0 +1,472 @@
+/* Enhanced CSS for Devika's Portfolio Website */
+/* Modern, professional styling with improved visual hierarchy */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #2c3e50;
+  min-height: 100vh;
+}
+
+#page {
+  width: 95%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.05);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 2rem 2rem 1.5rem;
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  opacity: 0.3;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.tagline {
+  margin: 0 0 1.5rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 1.2rem;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation Styling */
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  display: inline-block;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+nav a:active {
+  transform: translateY(0);
+}
+
+/* Main Content Styling */
+main {
+  padding: 2rem 2rem 1rem;
+}
+
+main section {
+  margin-bottom: 2.5rem;
+}
+
+main h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #4facfe;
+  position: relative;
+}
+
+main h2::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #00f2fe;
+}
+
+main h3 {
+  color: #34495e;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+main p {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Intro Section */
+.intro {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: -1rem -1rem 2rem -1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: rotate(45deg);
+}
+
+.intro h2 {
+  border: none;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.intro h2::after {
+  background: rgba(255,255,255,0.5);
+}
+
+.intro p {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Highlights Section */
+.highlights ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.highlights li {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  padding: 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid #4facfe;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlights li::before {
+  content: '✨';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.highlights li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Articles/Projects */
+article {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #4facfe;
+}
+
+article h2, article h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+article a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+article a:hover {
+  border-bottom-color: #4facfe;
+}
+
+/* Experience Section */
+section ul {
+  padding-left: 1.2rem;
+}
+
+section li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+section li::marker {
+  color: #4facfe;
+}
+
+/* Form Styling */
+form {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+form p {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+input[type="submit"] {
+  padding: 0.75rem 2rem;
+  border: none;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Validator Section */
+.validator {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.validator img {
+  transition: transform 0.2s ease;
+  border-radius: 4px;
+}
+
+.validator a:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 2rem -2rem 0;
+  border-radius: 0 0 16px 16px;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+footer a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #00f2fe;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #page {
+    width: 98%;
+    margin: 1rem auto;
+    border-radius: 12px;
+  }
+  
+  header {
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 1.5rem;
+  }
+  
+  nav ul {
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .intro {
+    margin: -0.5rem -0.5rem 2rem -0.5rem;
+    padding: 1.5rem;
+  }
+  
+  form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav a {
+    width: 200px;
+    text-align: center;
+  }
+  
+  main h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add subtle animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Contact section specific styling */
+section h2 + p a[href^="mailto:"] {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+section h2 + p a[href^="mailto:"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+}
