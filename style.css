@@ -27,14 +27,14 @@ body {
 }
 
 /* Header Styling */
-header {
+#header {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: white;
   padding: 2rem 2rem 1.5rem;
   position: relative;
 }
 
-header::before {
+#header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -45,7 +45,7 @@ header::before {
   opacity: 0.3;
 }
 
-header h1 {
+#header h1 {
   margin: 0 0 0.5rem 0;
   font-size: 2.5rem;
   font-weight: 700;
@@ -64,12 +64,12 @@ header h1 {
 }
 
 /* Navigation Styling */
-nav {
+#nav {
   position: relative;
   z-index: 1;
 }
 
-nav ul {
+#nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -78,11 +78,11 @@ nav ul {
   gap: 0.5rem;
 }
 
-nav ul li {
+#nav ul li {
   margin: 0;
 }
 
-nav a {
+#nav a {
   text-decoration: none;
   padding: 0.75rem 1.25rem;
   background: rgba(255,255,255,0.2);
@@ -95,26 +95,26 @@ nav a {
   display: inline-block;
 }
 
-nav a:hover {
+#nav a:hover {
   background: rgba(255,255,255,0.3);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-nav a:active {
+#nav a:active {
   transform: translateY(0);
 }
 
 /* Main Content Styling */
-main {
+#main {
   padding: 2rem 2rem 1rem;
 }
 
-main section {
+#main section {
   margin-bottom: 2.5rem;
 }
 
-main h2 {
+#main h2 {
   color: #2c3e50;
   font-size: 1.8rem;
   font-weight: 600;
@@ -124,7 +124,7 @@ main h2 {
   position: relative;
 }
 
-main h2::after {
+#main h2::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -134,14 +134,14 @@ main h2::after {
   background: #00f2fe;
 }
 
-main h3 {
+#main h3 {
   color: #34495e;
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1.5rem 0 0.5rem 0;
 }
 
-main p {
+#main p {
   margin-bottom: 1rem;
   color: #555;
   font-size: 1rem;
@@ -220,7 +220,7 @@ main p {
 }
 
 /* Articles/Projects */
-article {
+#article {
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 12px;
@@ -229,18 +229,18 @@ article {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-article:hover {
+#article:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   border-color: #4facfe;
 }
 
-article h2, article h3 {
+#article h2, article h3 {
   margin-top: 0;
   color: #2c3e50;
 }
 
-article a {
+#article a {
   color: #4facfe;
   text-decoration: none;
   font-weight: 500;
@@ -248,21 +248,21 @@ article a {
   transition: border-color 0.2s ease;
 }
 
-article a:hover {
+#article a:hover {
   border-bottom-color: #4facfe;
 }
 
 /* Experience Section */
-section ul {
+#section ul {
   padding-left: 1.2rem;
 }
 
-section li {
+#section li {
   margin-bottom: 0.5rem;
   color: #555;
 }
 
-section li::marker {
+#section li::marker {
   color: #4facfe;
 }
 
@@ -346,7 +346,7 @@ input[type="submit"]:active {
 }
 
 /* Footer Styling */
-footer {
+#footer {
   background: #2c3e50;
   color: white;
   text-align: center;
@@ -355,19 +355,19 @@ footer {
   border-radius: 0 0 16px 16px;
 }
 
-footer p {
+#footer p {
   margin: 0;
   opacity: 0.9;
 }
 
-footer a {
+#footer a {
   color: #4facfe;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-footer a:hover {
+#footer a:hover {
   color: #00f2fe;
 }
 
@@ -379,23 +379,23 @@ footer a:hover {
     border-radius: 12px;
   }
   
-  header {
+  #header {
     padding: 1.5rem;
   }
   
-  header h1 {
+  #header h1 {
     font-size: 2rem;
   }
   
-  main {
+  #main {
     padding: 1.5rem;
   }
   
-  nav ul {
+  #nav ul {
     justify-content: center;
   }
   
-  nav a {
+  #nav a {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
@@ -411,7 +411,7 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-  header h1 {
+  #header h1 {
     font-size: 1.8rem;
   }
   
@@ -419,17 +419,17 @@ footer a:hover {
     font-size: 1rem;
   }
   
-  nav ul {
+  #nav ul {
     flex-direction: column;
     align-items: center;
   }
   
-  nav a {
+  #nav a {
     width: 200px;
     text-align: center;
   }
   
-  main h2 {
+  #main h2 {
     font-size: 1.5rem;
   }
 }
@@ -451,12 +451,12 @@ html {
   }
 }
 
-main section {
+#main section {
   animation: fadeInUp 0.6s ease-out;
 }
 
 /* Contact section specific styling */
-section h2 + p a[href^="mailto:"] {
+#section h2 + p a[href^="mailto:"] {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   color: white;
   padding: 0.5rem 1rem;
@@ -466,7 +466,7 @@ section h2 + p a[href^="mailto:"] {
   transition: transform 0.2s ease;
 }
 
-section h2 + p a[href^="mailto:"]:hover {
+#section h2 + p a[href^="mailto:"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
 }
