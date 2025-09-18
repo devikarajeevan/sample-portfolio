@@ -148,7 +148,7 @@ body {
 }
 
 /* Intro Section */
-.intro {
+.intro, #intro-section {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
   padding: 2rem;
@@ -158,7 +158,7 @@ body {
   overflow: hidden;
 }
 
-.intro::before {
+.intro::before, #intro-section::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -169,17 +169,17 @@ body {
   transform: rotate(45deg);
 }
 
-.intro h2 {
+.intro h2, #intro-section h2 {
   border: none;
   color: white;
   margin-bottom: 1rem;
 }
 
-.intro h2::after {
+.intro h2::after, #intro-section h2::after {
   background: rgba(255,255,255,0.5);
 }
 
-.intro p {
+.intro p, #intro-section p {
   color: rgba(255,255,255,0.95);
   font-size: 1.1rem;
   position: relative;
@@ -187,14 +187,14 @@ body {
 }
 
 /* Highlights Section */
-.highlights ul {
+.highlights ul, #highlights-section ul {
   list-style: none;
   padding: 0;
   display: grid;
   gap: 1rem;
 }
 
-.highlights li {
+.highlights li, #highlights-section li {
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   padding: 1.25rem;
   border-radius: 10px;
@@ -205,7 +205,7 @@ body {
   overflow: hidden;
 }
 
-.highlights li::before {
+.highlights li::before, #highlights-section li::before {
   content: '✨';
   position: absolute;
   top: 1rem;
@@ -214,7 +214,7 @@ body {
   opacity: 0.7;
 }
 
-.highlights li:hover {
+.highlights li:hover, #highlights-section li:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
@@ -252,17 +252,23 @@ body {
   border-bottom-color: #4facfe;
 }
 
-/* Experience Section */
-#section ul {
+/* Experience Section - Updated for new IDs */
+#intro-section ul,
+#highlights-section ul,
+#validator-section ul {
   padding-left: 1.2rem;
 }
 
-#section li {
+#intro-section li,
+#highlights-section li,
+#validator-section li {
   margin-bottom: 0.5rem;
   color: #555;
 }
 
-#section li::marker {
+#intro-section li::marker,
+#highlights-section li::marker,
+#validator-section li::marker {
   color: #4facfe;
 }
 
@@ -328,7 +334,7 @@ input[type="submit"]:active {
 }
 
 /* Validator Section */
-.validator {
+.validator, #validator-section {
   text-align: center;
   background: #f8f9fa;
   padding: 1.5rem;
@@ -336,12 +342,12 @@ input[type="submit"]:active {
   border: 1px solid #e9ecef;
 }
 
-.validator img {
+.validator img, #validator-section img {
   transition: transform 0.2s ease;
   border-radius: 4px;
 }
 
-.validator a:hover img {
+.validator a:hover img, #validator-section a:hover img {
   transform: scale(1.05);
 }
 
@@ -400,7 +406,7 @@ input[type="submit"]:active {
     font-size: 0.9rem;
   }
   
-  .intro {
+  .intro, #intro-section {
     margin: -0.5rem -0.5rem 2rem -0.5rem;
     padding: 1.5rem;
   }
@@ -455,8 +461,10 @@ html {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Contact section specific styling */
-#section h2 + p a[href^="mailto:"] {
+/* Contact section specific styling - Updated for new IDs */
+#intro-section h2 + p a[href^="mailto:"],
+#highlights-section h2 + p a[href^="mailto:"],
+#validator-section h2 + p a[href^="mailto:"] {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   color: white;
   padding: 0.5rem 1rem;
@@ -466,7 +474,9 @@ html {
   transition: transform 0.2s ease;
 }
 
-#section h2 + p a[href^="mailto:"]:hover {
+#intro-section h2 + p a[href^="mailto:"]:hover,
+#highlights-section h2 + p a[href^="mailto:"]:hover,
+#validator-section h2 + p a[href^="mailto:"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
 }
